@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';  
 
 const LogoutComponent = () => {
+    const navigate = useNavigate();
 useEffect(()=>{
     localStorage.removeItem('token')
-    location.href='/login'
+    navigate('/login')
 })
   return (
 <React.Fragment>
