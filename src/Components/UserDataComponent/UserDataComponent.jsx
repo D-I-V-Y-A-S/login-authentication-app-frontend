@@ -6,6 +6,7 @@ const UserDataComponent = () => {
     const [userData, setUserData] = useState('');
 
     useEffect(() => {
+        console.log(`${Base_Url}/userdata`)
         console.log(localStorage.getItem('token'))
       axios.post(`${Base_Url}/userdata`,{
         //item set in loginComponent
