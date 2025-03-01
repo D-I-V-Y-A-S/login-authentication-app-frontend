@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Base_Url from '../../../config'
+import { useNavigate } from 'react-router-dom';  
 
 const LoginComponent = () => {
      const navigate = useNavigate();
