@@ -14,7 +14,7 @@ const LoginComponent = () => {
     const passwordHandler = (event) =>{
         setPassword(event.target.value)
       }
-    
+    console.log(`${Base_Url}`)
     const formSubmitHandler = (event) =>{
         event.preventDefault()
         
