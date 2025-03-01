@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Base_Url from '../../../config'
 
 const LoginComponent = () => {
+     const navigate = useNavigate();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -25,7 +26,7 @@ const LoginComponent = () => {
             {
               alert(`Welcome ${response.data.firstName} ${response.data.lastName} !`)
              localStorage.setItem('token',response.data.token)
-              location.href = '/userdata'
+              navigate('/userdata')
             }
         })
         .catch((error) => {
