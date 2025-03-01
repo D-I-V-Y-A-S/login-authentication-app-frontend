@@ -6,7 +6,7 @@ const LogoutComponent = () => {
 useEffect(()=>{
     localStorage.removeItem('token')
     navigate('/login')
-})
+},[])
   return (
 <React.Fragment>
 
