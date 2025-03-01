@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';  
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const LogoutComponent = () => {
     const navigate = useNavigate();
-useEffect(()=>{
-    localStorage.removeItem('token')
-    navigate('/login')
-},[])
-  return (
-<React.Fragment>
 
-</React.Fragment>
-  )
-}
+    useEffect(() => {
+        localStorage.removeItem('token');
+        setTimeout(() => {
+            navigate('/login');
+        }, 100); // Slight delay ensures proper redirection
+    }, []);
 
-export default LogoutComponent
+    return null; // No need to return any UI
+};
+
+export default LogoutComponent;
